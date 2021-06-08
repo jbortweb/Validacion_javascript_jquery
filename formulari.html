@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validacion jquery</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript" src="jquery-3.5.1.js"></script>
+	<script type='text/javascript' src='formulari.js'></script>
+	<link rel='stylesheet' href='formulari.css'>
+</head>
+
+<body>
+	
+	<form name="formValida" action=""  method="post" onsubmit="return validartotal()">
+	Empleneu els següents camps, tots son obligatoris:<br><br>
+		<table>
+
+			<tr>
+				<td>Nom:</td><td><input id="nom" name="nom" type="text" onBlur="validarNom(this.value)"></td>
+				<td id='errorNom' class='oculto'>El nom es incorrecte</td>
+			</tr>
+			<tr>
+				<td>Cognom:</td><td><input id='cognom' type="text" name="cognom" onBlur='validarCognom(this.value)'></td>
+				<td id='errorCognom' class='oculto'>El cognom es incorrecte</td>
+			</tr>
+			<tr>
+				<td>Email:</td><td><input id='mail' type="text" name="mail" onBlur='validarMail(this.value)'></td>
+				<td id='errorMail' class='oculto'>El mail es incorrecte</td>
+			</tr>
+			<tr>
+				<td><br>Data de naixement:</td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Dia:</td><td><input id='dia' type="text" name="dia" onBlur='validarDia(this.value)'></td>
+				<td id='errorDia' class='oculto'>El dia no es correcte</td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Mes:</td><td><input id='mes' type="text" name="mes" onBlur='validarMes(this.value)'></td>
+				<td id='errorMes' class='oculto'>El mes no es correcte</td>
+			</tr>
+			<tr>
+				<td>&nbsp;&nbsp;Any:</td><td><input id='any' type="text" name="any" onBlur='validarAny(this.value)'></td>
+				<td id='errorAny' class='oculto'>El any no es correcte</td>
+			</tr>
+			<tr>
+				<td>Telefon:</td><td><input id='telefon' type="text" name="telefon" onBlur='validarTelefon(this.value)'></td>
+				<td id='errorTelefon' class='oculto'>El telefon no es correcte</td>
+			</tr>
+		
+			<tr>
+				<td>DNI:</td><td><input id='dni' type="text" name="dni" onBlur='validarDni(this.value)'></td>
+				<td id='errorDni' class='oculto'>El DNI no es correcte</td>
+			</tr>
+			<tr>
+				<td></td><td align="right"><input type="submit" value="Envia" onsubmit="return validartotal()"></td>
+			</tr>
+			<tr>
+				<td></td><td align="right"><input type="reset" value='borrar'</td>
+			</tr>
+
+
+		</table>
+	</form>
+	<p id="texto"></p>
+	
+	</body>
+	</html>
+	
